@@ -1,0 +1,19 @@
+<function beta_wavelet at 0x2ab262480820>
+512
+512
+512
+Torch: 2.0.1+cu117
+cll
+['/home/guoyiyang/data/BarrysMockTheoPSD/stationaryNoise_coloredNoise_evenNum_8000.npz', '/home/guoyiyang/data/BarrysMockTheoPSD/stationaryNoise_coloredNoise_evenNum_8001.npz', '/home/guoyiyang/data/BarrysMockTheoPSD/stationaryNoise_coloredNoise_evenNum_8002.npz', '/home/guoyiyang/data/BarrysMockTheoPSD/stationaryNoise_coloredNoise_evenNum_8003.npz', '/home/guoyiyang/data/BarrysMockTheoPSD/stationaryNoise_coloredNoise_evenNum_8004.npz']
+Train Data: 2000
+Test Data: 2600
+Temp file exists, loading temp file
+Temp file exists, loading temp file
+Temp file exists, loading temp file
+Temp file exists, loading temp file
+loaded path processed_data/training/test_data1.pth
+loaded path processed_data/training/test_data2.pth
+loaded path processed_data/training/train_data1.pth
+loaded path processed_data/training/train_data2.pth
+wavelet shape: torch.Size([20, 15])
+multiBand shape: torch.Size([400, 15])

@@ -1,0 +1,67 @@
+Config:
+  config1:
+    activation: relu
+    # d_ff: 1024
+    # d_model: 256
+    d_ff: 2048
+    d_model: 512
+    dropout: 0.1
+    e_layers: 3
+    embed: fixed
+    extract_func: beta_wavelet
+    factor: 5
+    freq: s
+    n_heads: 8
+    output_attention: false
+    pred_len: 20
+    seq_len: 20
+    reshape: None #20 x 300
+  config2:
+    activation: relu
+    d_ff: 2048
+    d_model: 512
+    dropout: 0.1
+    e_layers: 3
+    embed: fixed
+    extract_func: beta_extract_func
+    factor: 5
+    freq: s
+    n_heads: 8
+    output_attention: true
+    pred_len: 400
+    seq_len: 400
+
+fileConfig:
+# chirp_train_paths
+  training_log: logs/log_training.txt
+  dataset_pathsFile: config/BarrysMockTrain_paths.npz
+  # dataset_pathsFile_fineTune: config/BarrysO1FineTune_paths_train.npz
+  # dataset_pathsFile: config/BarrysO3a_paths.npz
+  # dataset_pathsFile: config/Barry_O2_fineTune_paths.npz
+  outputPrefix : threshold_newRemoval_v2/
+  sameClassKey: stationaryNoise
+  temp_test_loaded: false
+  # temp_testing: processed_data_test/temp_testing_newWave_O3a/d
+  temp_testing: processed_data/testing/
+  temp_train_loaded: false
+  # temp_training: processed_data_test/temp_training_newWave_O3a/
+  temp_training: processed_data/training/
+  # temp_training: processed_data_test/temp_training_newWave/
+  test_batch_size: 64
+  train_batch_size: 64
+  train_number_epochs: 20
+  
+  weights_dir: weights/
+  # weights_dir: weights_finetune/
+  # weights_dir: weights/
+  # fine_weights_dir: weights_finetune/
+  # train_dir: '/home/guoyiyang/data/BarrysNoise/'
+  # test_dir: '/home/guoyiyang/data/BarrysGlitch/'
+  reshape1: null  # 20 x 15
+  # reshape1: [-1,15]
+  reshape2: [-1,15]
+# 15 x 64  and   300 x 32
+# 1 latentspace = 15 x d_model, 300 x d_dmodel
+#  64 -> d_model and 32 -> d_model
+
+# if I dont concate? 100 x 32 and 100 x 32 -> 100 x 64
